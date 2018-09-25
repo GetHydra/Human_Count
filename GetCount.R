@@ -61,28 +61,33 @@ GetCount<-function(Tare,Current_Vly)
 			tst_3[i]=tmp3
 		}
 
-	R1=round(tst_1,0)
+		R1=round(tst_1,0)
 	R2=round(tst_2,0)
 	R3=round(tst_3,0)
-plot(density(tst_1),type='l')
-lines(density(tst_2),col='red')
-lines(density(tst_3),col='blue')
-abline(v=round(ins,0),col='green')
+
 	E1=sum(abs(round(ins,0)-R1))
 	E2=sum(abs(round(ins,0)-R2))
 	E3=sum(abs(round(ins,0)-R3))
 	EE=c(E1,E2,E3)
-print("Errors")
-print(EE)
+
 	WM=which(EE==min(EE))[1]
 	COF=c(M1,M2,M3)[WM]
-print("All Values")
-print(c(M1,M2,M3))
-print("Which Is Min")
-print(WM)
-print("COF:")
-print(COF)
+
+#plot(density(tst_1),type='l')
+#lines(density(tst_2),col='red')
+#lines(density(tst_3),col='blue')
+#abline(v=round(ins,0),col='green')
+#print("Errors")
+#print(EE)
+#print("All Values")
+#print(c(M1,M2,M3))
+#print("Which Is Min")
+#print(WM)
+#print("COF:")
+#print(COF)
+	
 	return(round((ins/COF),0))
 	
-}
+} #end function
+
 
