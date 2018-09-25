@@ -1,4 +1,4 @@
-GetCount<-function(Tare,Current_Vly)
+GetCount<-function(Tare,Current_Vly,Varz=.05)
 {
 	
 	M1=Tare
@@ -61,7 +61,7 @@ GetCount<-function(Tare,Current_Vly)
 			tst_3[i]=tmp3
 		}
 
-		R1=round(tst_1,0)
+	R1=round(tst_1,0)
 	R2=round(tst_2,0)
 	R3=round(tst_3,0)
 
